@@ -6,10 +6,18 @@
     "outDir": "lib",
     "sourceMap": true,
     "strict": true,
-    "target": "es2017"
+    "target": "es2017",
+    "noImplicitAny": false,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "resolveJsonModule": true,
+    "baseUrl": "src",
   },
   "compileOnSave": true,
   "include": [
-    "src"
+    "src/**/*",
+    ".eslintrc.js"
   ]
+  
 }
