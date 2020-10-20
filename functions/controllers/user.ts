@@ -53,7 +53,7 @@ userApp.post('/', async (req, res) => {
     await db.collection('Users').add(user);
 
     res.status(201).send();
-})
+});
 //change user info
 userApp.put('/:id', async (req, res ) => {
     const body = req.body;
@@ -68,7 +68,7 @@ userApp.delete('/:id', async (req, res) => {
     await db.collection('Users').doc(req.params.id).delete();
 
     res.status(200).send();
-})
+});
 
 export const user = functions.https.onRequest(userApp);
 
